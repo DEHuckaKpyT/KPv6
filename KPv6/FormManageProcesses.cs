@@ -62,5 +62,12 @@ namespace KPv6
             formChangeProcess.ShowDialog();
             UpdateAllListBoxes();
         }
+
+        private void buttonChange_Click(object sender, EventArgs e)
+        {
+            formChangeProcess = new FormChangeProcess((Process)listBoxProcesses.SelectedItem, allProcesses, listBoxLog);
+            formChangeProcess.ShowDialog();
+            UpdateAllListBoxes();
+        }
     }
 }
