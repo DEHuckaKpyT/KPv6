@@ -29,7 +29,7 @@ namespace KPv6
 
         private void FormChangeProcess_Load(object sender, EventArgs e)
         {
-            comboBoxMethodProcess.Items.Add("Случайный символ");
+            comboBoxMethodProcess.Items.Add("Указанный символ");
             comboBoxMethodProcess.Items.Add("Значения последовательности");
             comboBoxMethodProcess.Items.Add("Текущая дата");
             if (process != null)
@@ -60,7 +60,7 @@ namespace KPv6
                 process.description = textBoxDescription.Text;
                 switch (comboBoxMethodProcess.SelectedItem)
                 {
-                    case "Случайный символ":
+                    case "Указанный символ":
                         process.method = methods.PrintChar;
                         methods.c = Convert.ToChar(textBoxChar.Text);
                         break;
@@ -80,7 +80,7 @@ namespace KPv6
 
                 switch (comboBoxMethodProcess.SelectedItem)
                 {
-                    case "Случайный символ":
+                    case "Указанный символ":
                         processes.Add(new Process(textBoxNameProcess.Text,
                             (string)comboBoxMethodProcess.SelectedItem,
                             int.Parse(textBoxWorkingTime.Text),
@@ -115,7 +115,7 @@ namespace KPv6
         {
             switch (comboBoxMethodProcess.SelectedItem)
             {
-                case "Случайный символ":
+                case "Указанный символ":
                     textBoxChar.Visible = true;
                     textBoxN.Visible = false;
                     textBoxX.Visible = false;

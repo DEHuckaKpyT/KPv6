@@ -53,7 +53,12 @@ namespace KPv6
             foreach (Process process in allProcesses)
             {
                 listBoxProcesses.Items.Add(process);
-                listBoxProcessesExtented.Items.Add($"{process.workingTime + " мс", 6}  {process.nameMethod, -29} {process.description}");
+                if (process.nameMethod == "Значения последовательности")
+                    listBoxProcessesExtented.Items.Add($"{process.workingTime + " мс",6}  {process.nameMethod,-29} {process.description}");
+                if (process.nameMethod == "Указанный символ")
+                    listBoxProcessesExtented.Items.Add($"{process.workingTime + " мс",6}  {process.nameMethod,-29} {process.description}");
+                if (process.nameMethod == "Текущая дата")
+                    listBoxProcessesExtented.Items.Add($"{process.workingTime + " мс",6}  {process.nameMethod,-29} {process.description}");
             }
         }
 
