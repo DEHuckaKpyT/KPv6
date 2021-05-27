@@ -67,25 +67,25 @@ namespace KPv6
             allProcesses = new List<Process>();
             processPlan = new ProcessPlan(listBoxLog, listBoxProcesses, listBoxState, listBoxTime, int.Parse(textBox1.Text), allProcesses);
             Methods methods = new Methods(listBoxLog, 3, 0.5, (char)new Random().Next(0, 255));
-            processPlan.AddProcess(new Process("Вывод значений элементов последовательности", "Значения последовательности", 40, methods.PrintValuesOfSequence));
+            processPlan.AddProcess(new Process("Вывод значений элементов последовательности", "Значения последовательности", 40, methods.PrintValuesOfSequence, "Задан изначально"));
             methods = new Methods(listBoxLog, 3, 0.5, (char)new Random().Next(0, 255));
-            processPlan.AddProcess(new Process("Вывод символа", "Случайный символ", 12, methods.PrintChar));
+            processPlan.AddProcess(new Process("Вывод символа", "Случайный символ", 5, methods.PrintChar, "Задан изначально"));
             methods = new Methods(listBoxLog, 3, 0.5, (char)new Random().Next(0, 255));
-            processPlan.AddProcess(new Process("Вывод текущего времени", "Текущая дата", 13, methods.PrintDate));
+            processPlan.AddProcess(new Process("Вывод текущего времени", "Текущая дата", 13, methods.PrintDate, "Задан изначально"));
             methods = new Methods(listBoxLog, 3, 0.5, (char)new Random().Next(0, 255));
-            processPlan.AddProcess(new Process("Вывод символа", "Случайный символ", 16, methods.PrintChar));
+            processPlan.AddProcess(new Process("Вывод символа", "Случайный символ", 16, methods.PrintChar, "Задан изначально"));
             methods = new Methods(listBoxLog, 3, 0.5, (char)new Random().Next(0, 255));
-            processPlan.AddProcess(new Process("Вывод текущего времени", "Текущая дата", 19, methods.PrintDate));
+            processPlan.AddProcess(new Process("Вывод текущего времени", "Текущая дата", 19, methods.PrintDate, "Задан изначально"));
             methods = new Methods(listBoxLog, 3, 0.5, (char)new Random().Next(0, 255));
-            processPlan.AddProcess(new Process("Вывод значений элементов последовательности", "Значения последовательности", 56, methods.PrintValuesOfSequence));
+            processPlan.AddProcess(new Process("Вывод значений элементов последовательности", "Значения последовательности", 56, methods.PrintValuesOfSequence, "Задан изначально"));
             methods = new Methods(listBoxLog, 3, 0.5, (char)new Random().Next(0, 255));
-            processPlan.AddProcess(new Process("Вывод символа", "Случайный символ", 44, methods.PrintChar));
+            processPlan.AddProcess(new Process("Вывод символа", "Случайный символ", 44, methods.PrintChar, "Задан изначально"));
             methods = new Methods(listBoxLog, 3, 0.5, (char)new Random().Next(0, 255));
-            processPlan.AddProcess(new Process("Вывод текущего времени", "Текущая дата", 33, methods.PrintDate));
+            processPlan.AddProcess(new Process("Вывод текущего времени", "Текущая дата", 33, methods.PrintDate, "Задан изначально"));
             methods = new Methods(listBoxLog, 3, 0.5, (char)new Random().Next(0, 255));
-            processPlan.AddProcess(new Process("Вывод символа", "Случайный символ", 36, methods.PrintChar));
+            processPlan.AddProcess(new Process("Вывод символа", "Случайный символ", 36, methods.PrintChar, "Задан изначально"));
             methods = new Methods(listBoxLog, 3, 0.5, (char)new Random().Next(0, 255));
-            processPlan.AddProcess(new Process("Вывод текущего времени", "Текущая дата", 59, methods.PrintDate));
+            processPlan.AddProcess(new Process("Вывод текущего времени", "Текущая дата", 59, methods.PrintDate, "Задан изначально"));
         }
 
         private void buttonOpenManager_Click(object sender, EventArgs e)

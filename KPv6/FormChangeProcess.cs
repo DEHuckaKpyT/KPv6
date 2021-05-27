@@ -40,6 +40,7 @@ namespace KPv6
                 textBoxX.Text = methods.x.ToString();
                 textBoxNameProcess.Text = process.name;
                 textBoxWorkingTime.Text = process.workingTime.ToString();
+                textBoxDescription.Text = process.description;
                 comboBoxMethodProcess.SelectedItem = process.nameMethod;
             }
             else
@@ -56,6 +57,7 @@ namespace KPv6
                 Methods methods = (Methods)process.method.Target;
                 process.name = textBoxNameProcess.Text;
                 process.workingTime = int.Parse(textBoxWorkingTime.Text);
+                process.description = textBoxDescription.Text;
                 switch (comboBoxMethodProcess.SelectedItem)
                 {
                     case "Случайный символ":
@@ -82,19 +84,22 @@ namespace KPv6
                         processes.Add(new Process(textBoxNameProcess.Text,
                             (string)comboBoxMethodProcess.SelectedItem,
                             int.Parse(textBoxWorkingTime.Text),
-                            new Action(curMethod.PrintChar)));
+                            new Action(curMethod.PrintChar), 
+                            textBoxDescription.Text));
                         break;
                     case "Значения последовательности":
                         processes.Add(new Process(textBoxNameProcess.Text,
                             (string)comboBoxMethodProcess.SelectedItem,
                             int.Parse(textBoxWorkingTime.Text),
-                            new Action(curMethod.PrintValuesOfSequence)));
+                            new Action(curMethod.PrintValuesOfSequence),
+                            textBoxDescription.Text));
                         break;
                     case "Текущая дата":
                         processes.Add(new Process(textBoxNameProcess.Text,
                             (string)comboBoxMethodProcess.SelectedItem,
                             int.Parse(textBoxWorkingTime.Text),
-                            new Action(curMethod.PrintDate)));
+                            new Action(curMethod.PrintDate),
+                            textBoxDescription.Text));
                         break;
                 }
             }

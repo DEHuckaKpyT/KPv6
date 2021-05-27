@@ -43,14 +43,17 @@ namespace KPv6
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxChar = new System.Windows.Forms.TextBox();
             this.labelChar = new System.Windows.Forms.Label();
+            this.textBoxDescription = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // buttonSaveChanges
             // 
             this.buttonSaveChanges.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonSaveChanges.Location = new System.Drawing.Point(215, 265);
+            this.buttonSaveChanges.Location = new System.Drawing.Point(211, 277);
+            this.buttonSaveChanges.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonSaveChanges.Name = "buttonSaveChanges";
-            this.buttonSaveChanges.Size = new System.Drawing.Size(150, 43);
+            this.buttonSaveChanges.Size = new System.Drawing.Size(112, 35);
             this.buttonSaveChanges.TabIndex = 0;
             this.buttonSaveChanges.Text = "Сохранить";
             this.buttonSaveChanges.UseVisualStyleBackColor = true;
@@ -59,18 +62,20 @@ namespace KPv6
             // textBoxNameProcess
             // 
             this.textBoxNameProcess.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxNameProcess.Location = new System.Drawing.Point(27, 37);
+            this.textBoxNameProcess.Location = new System.Drawing.Point(20, 30);
+            this.textBoxNameProcess.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxNameProcess.Name = "textBoxNameProcess";
-            this.textBoxNameProcess.Size = new System.Drawing.Size(297, 34);
+            this.textBoxNameProcess.Size = new System.Drawing.Size(224, 29);
             this.textBoxNameProcess.TabIndex = 1;
             this.textBoxNameProcess.Text = "Новый процесс";
             // 
             // textBoxWorkingTime
             // 
             this.textBoxWorkingTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxWorkingTime.Location = new System.Drawing.Point(27, 89);
+            this.textBoxWorkingTime.Location = new System.Drawing.Point(20, 72);
+            this.textBoxWorkingTime.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxWorkingTime.Name = "textBoxWorkingTime";
-            this.textBoxWorkingTime.Size = new System.Drawing.Size(297, 34);
+            this.textBoxWorkingTime.Size = new System.Drawing.Size(224, 29);
             this.textBoxWorkingTime.TabIndex = 2;
             this.textBoxWorkingTime.Text = "35";
             // 
@@ -78,9 +83,10 @@ namespace KPv6
             // 
             this.comboBoxMethodProcess.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBoxMethodProcess.FormattingEnabled = true;
-            this.comboBoxMethodProcess.Location = new System.Drawing.Point(27, 142);
+            this.comboBoxMethodProcess.Location = new System.Drawing.Point(20, 115);
+            this.comboBoxMethodProcess.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBoxMethodProcess.Name = "comboBoxMethodProcess";
-            this.comboBoxMethodProcess.Size = new System.Drawing.Size(297, 37);
+            this.comboBoxMethodProcess.Size = new System.Drawing.Size(224, 32);
             this.comboBoxMethodProcess.TabIndex = 3;
             this.comboBoxMethodProcess.SelectedIndexChanged += new System.EventHandler(this.comboBoxMethodProcess_SelectedIndexChanged);
             // 
@@ -88,9 +94,10 @@ namespace KPv6
             // 
             this.labelN.AutoSize = true;
             this.labelN.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelN.Location = new System.Drawing.Point(352, 133);
+            this.labelN.Location = new System.Drawing.Point(264, 108);
+            this.labelN.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelN.Name = "labelN";
-            this.labelN.Size = new System.Drawing.Size(46, 29);
+            this.labelN.Size = new System.Drawing.Size(37, 24);
             this.labelN.TabIndex = 4;
             this.labelN.Text = "n =";
             // 
@@ -98,36 +105,40 @@ namespace KPv6
             // 
             this.labelX.AutoSize = true;
             this.labelX.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelX.Location = new System.Drawing.Point(354, 162);
+            this.labelX.Location = new System.Drawing.Point(266, 132);
+            this.labelX.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelX.Name = "labelX";
-            this.labelX.Size = new System.Drawing.Size(44, 29);
+            this.labelX.Size = new System.Drawing.Size(36, 24);
             this.labelX.TabIndex = 5;
             this.labelX.Text = "x =";
             // 
             // textBoxN
             // 
             this.textBoxN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxN.Location = new System.Drawing.Point(415, 132);
+            this.textBoxN.Location = new System.Drawing.Point(311, 107);
+            this.textBoxN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxN.Name = "textBoxN";
-            this.textBoxN.Size = new System.Drawing.Size(61, 30);
+            this.textBoxN.Size = new System.Drawing.Size(47, 26);
             this.textBoxN.TabIndex = 6;
             this.textBoxN.Text = "3";
             // 
             // textBoxX
             // 
             this.textBoxX.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxX.Location = new System.Drawing.Point(415, 161);
+            this.textBoxX.Location = new System.Drawing.Point(311, 131);
+            this.textBoxX.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxX.Name = "textBoxX";
-            this.textBoxX.Size = new System.Drawing.Size(61, 30);
+            this.textBoxX.Size = new System.Drawing.Size(47, 26);
             this.textBoxX.TabIndex = 7;
             this.textBoxX.Text = "0,5";
             // 
             // buttonCancel
             // 
             this.buttonCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonCancel.Location = new System.Drawing.Point(371, 265);
+            this.buttonCancel.Location = new System.Drawing.Point(328, 277);
+            this.buttonCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(150, 43);
+            this.buttonCancel.Size = new System.Drawing.Size(112, 35);
             this.buttonCancel.TabIndex = 8;
             this.buttonCancel.Text = "Отмена";
             this.buttonCancel.UseVisualStyleBackColor = true;
@@ -136,36 +147,40 @@ namespace KPv6
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(24, 17);
+            this.label1.Location = new System.Drawing.Point(18, 14);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(138, 17);
+            this.label1.Size = new System.Drawing.Size(108, 13);
             this.label1.TabIndex = 9;
             this.label1.Text = "Название процесса";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(24, 70);
+            this.label2.Location = new System.Drawing.Point(18, 57);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(103, 17);
+            this.label2.Size = new System.Drawing.Size(80, 13);
             this.label2.TabIndex = 10;
             this.label2.Text = "Время работы";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(24, 123);
+            this.label3.Location = new System.Drawing.Point(18, 100);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(129, 17);
+            this.label3.Size = new System.Drawing.Size(99, 13);
             this.label3.TabIndex = 11;
             this.label3.Text = "Результат работы";
             // 
             // textBoxChar
             // 
             this.textBoxChar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxChar.Location = new System.Drawing.Point(437, 94);
+            this.textBoxChar.Location = new System.Drawing.Point(328, 121);
+            this.textBoxChar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxChar.Name = "textBoxChar";
-            this.textBoxChar.Size = new System.Drawing.Size(61, 30);
+            this.textBoxChar.Size = new System.Drawing.Size(47, 26);
             this.textBoxChar.TabIndex = 13;
             this.textBoxChar.Text = "a";
             // 
@@ -173,17 +188,40 @@ namespace KPv6
             // 
             this.labelChar.AutoSize = true;
             this.labelChar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelChar.Location = new System.Drawing.Point(352, 94);
+            this.labelChar.Location = new System.Drawing.Point(264, 121);
+            this.labelChar.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelChar.Name = "labelChar";
-            this.labelChar.Size = new System.Drawing.Size(79, 29);
+            this.labelChar.Size = new System.Drawing.Size(63, 24);
             this.labelChar.TabIndex = 12;
             this.labelChar.Text = "char =";
             // 
+            // textBoxDescription
+            // 
+            this.textBoxDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxDescription.Location = new System.Drawing.Point(21, 161);
+            this.textBoxDescription.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxDescription.Name = "textBoxDescription";
+            this.textBoxDescription.Size = new System.Drawing.Size(518, 29);
+            this.textBoxDescription.TabIndex = 14;
+            this.textBoxDescription.Text = "Добавлен пользователем";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(18, 146);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(57, 13);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "Описание";
+            // 
             // FormChangeProcess
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(540, 331);
+            this.ClientSize = new System.Drawing.Size(550, 342);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.textBoxDescription);
             this.Controls.Add(this.textBoxChar);
             this.Controls.Add(this.labelChar);
             this.Controls.Add(this.label3);
@@ -198,6 +236,7 @@ namespace KPv6
             this.Controls.Add(this.textBoxWorkingTime);
             this.Controls.Add(this.textBoxNameProcess);
             this.Controls.Add(this.buttonSaveChanges);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormChangeProcess";
             this.Text = "FormChangeProcess";
             this.Load += new System.EventHandler(this.FormChangeProcess_Load);
@@ -222,5 +261,7 @@ namespace KPv6
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBoxChar;
         private System.Windows.Forms.Label labelChar;
+        private System.Windows.Forms.TextBox textBoxDescription;
+        private System.Windows.Forms.Label label4;
     }
 }

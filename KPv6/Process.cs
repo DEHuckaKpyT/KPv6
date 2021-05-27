@@ -13,14 +13,16 @@ namespace KPv6
         public Action method;//задача процесса
         public string nameMethod;
         public ProcessState processState;
+        public string description;
 
-        public Process(string name, string nameMethod, int time, Action method)
+        public Process(string name, string nameMethod, int time, Action method, string description = "")
         {
             this.name = name;
             workingTime = time;
             this.method = method;
             this.nameMethod = nameMethod;
             processState = ProcessState.В_очереди;
+            this.description = description;
         }
         public override string ToString()
         {

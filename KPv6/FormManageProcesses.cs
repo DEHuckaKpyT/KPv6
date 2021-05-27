@@ -38,6 +38,7 @@ namespace KPv6
 
         private void buttonDelete_Click(object sender, EventArgs e)
         {
+            if (listBoxProcesses.SelectedItem == null) return;
             allProcesses.Remove((Process)listBoxProcesses.SelectedItem);
             UpdateAllListBoxes();
         }
@@ -46,18 +47,26 @@ namespace KPv6
         {
             processPlan.UpdateList();
             listBoxProcesses.Items.Clear();
+            listBoxProcessesExtented.Items.Clear();
+            listBoxProcesses.Items.Add("Название процесса");
+            listBoxProcessesExtented.Items.Add($"{"Время", 6}  {"Назначение процесса", -29} {"Описание"}");;
             foreach (Process process in allProcesses)
+            {
                 listBoxProcesses.Items.Add(process);
+                listBoxProcessesExtented.Items.Add($"{process.workingTime + " мс", 6}  {process.nameMethod, -29} {process.description}");
+            }
         }
 
         private void buttonAddProcess_Click(object sender, EventArgs e)
         {
             formChangeProcess = new FormChangeProcess(null, allProcesses, listBoxLog);
             formChangeProcess.ShowDialog();
+            UpdateAllListBoxes();
         }
 
         private void listBoxProcesses_MouseDoubleClick(object sender, MouseEventArgs e)
         {
+            if (listBoxProcesses.SelectedIndex == 0) return;
             formChangeProcess = new FormChangeProcess((Process)listBoxProcesses.SelectedItem, allProcesses, listBoxLog);
             formChangeProcess.ShowDialog();
             UpdateAllListBoxes();
@@ -65,6 +74,28 @@ namespace KPv6
 
         private void buttonChange_Click(object sender, EventArgs e)
         {
+            if (listBoxProcesses.SelectedItem == null) return;
+            formChangeProcess = new FormChangeProcess((Process)listBoxProcesses.SelectedItem, allProcesses, listBoxLog);
+            formChangeProcess.ShowDialog();
+            UpdateAllListBoxes();
+        }
+
+        private void listBoxProcesses_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            listBoxProcessesExtented.SelectedIndex = listBoxProcesses.SelectedIndex;
+            if (listBoxProcesses.SelectedIndex == 0) listBoxProcesses.SelectedIndex = -1;
+        }
+
+        private void listBoxProcessesExtented_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            listBoxProcesses.SelectedIndex = listBoxProcessesExtented.SelectedIndex;
+            if (listBoxProcessesExtented.SelectedIndex == 0) listBoxProcessesExtented.SelectedIndex = -1;
+        }
+
+        private void listBoxProcessesExtented_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (listBoxProcessesExtented.SelectedIndex == 0) return;
+            listBoxProcesses.SelectedIndex = listBoxProcessesExtented.SelectedIndex;
             formChangeProcess = new FormChangeProcess((Process)listBoxProcesses.SelectedItem, allProcesses, listBoxLog);
             formChangeProcess.ShowDialog();
             UpdateAllListBoxes();
