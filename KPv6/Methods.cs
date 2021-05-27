@@ -10,28 +10,31 @@ namespace KPv6
     class Methods
     {
         ListBox listBox;
-        Random rand = new Random();
+        public int n;
+        public double x;
+        public char c;
 
-        public Methods(ListBox listBox)
+        public Methods(ListBox listBox, int n, double x, char c)
         {
             this.listBox = listBox;
+            this.n = n;
+            this.x = x;
+            this.c = c;
         }
 
         public void PrintChar()//выводит символ
         {
-            listBox.Invoke(new Action(() => listBox.Items.Add("Результат выполнения \"" + (char)rand.Next(0, 255) + "\"")));
+            listBox.Invoke(new Action(() => listBox.Items.Add("Результат выполнения \"" + c.ToString()+ "\"")));
         }
         public void PrintValuesOfSequence()//выводит значения последовательности
         {
-            int n = 3;
-            double x = 1;
 
             string forPrint = "";
             forPrint += x.ToString();
             for (int i = 1; i < n; i++)
             {
                 double newX = Math.Sin(x);
-                forPrint += " " + newX.ToString();
+                forPrint += $" {newX.ToString():N2}";
                 x = newX;
             }
             listBox.Invoke(new Action(() => listBox.Items.Add("Результат выполнения \"" + forPrint + "\"")));

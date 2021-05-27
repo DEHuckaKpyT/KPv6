@@ -46,11 +46,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="FormChangeProcess.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FormChangeProcess.Designer.cs">
+      <DependentUpon>FormChangeProcess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormManageProcesses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormManageProcesses.Designer.cs">
+      <DependentUpon>FormManageProcesses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormViewProcessing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormViewProcessing.Designer.cs">
+      <DependentUpon>FormViewProcessing.cs</DependentUpon>
     </Compile>
     <Compile Include="Methods.cs" />
     <Compile Include="Process.cs" />
@@ -60,8 +72,14 @@
     <Compile Include="ProcessState.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="FormChangeProcess.resx">
+      <DependentUpon>FormChangeProcess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManageProcesses.resx">
+      <DependentUpon>FormManageProcesses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormViewProcessing.resx">
+      <DependentUpon>FormViewProcessing.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

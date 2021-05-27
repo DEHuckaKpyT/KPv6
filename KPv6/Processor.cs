@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace KPv6
 {
-    class Processor
+    public class Processor
     {
         public int quantum;//размер кванта времени (не знаю, в чём измеряется)
         ListBox listBox;

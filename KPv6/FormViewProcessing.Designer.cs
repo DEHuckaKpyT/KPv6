@@ -1,7 +1,7 @@
 ﻿
 namespace KPv6
 {
-    partial class Form1
+    partial class FormViewProcessing
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -39,6 +39,7 @@ namespace KPv6
             this.label3 = new System.Windows.Forms.Label();
             this.listBoxTime = new System.Windows.Forms.ListBox();
             this.listBoxState = new System.Windows.Forms.ListBox();
+            this.buttonOpenManager = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listBoxProcesses
@@ -47,21 +48,21 @@ namespace KPv6
             this.listBoxProcesses.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.listBoxProcesses.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.listBoxProcesses.FormattingEnabled = true;
-            this.listBoxProcesses.ItemHeight = 16;
-            this.listBoxProcesses.Location = new System.Drawing.Point(5, 29);
-            this.listBoxProcesses.Margin = new System.Windows.Forms.Padding(2);
+            this.listBoxProcesses.ItemHeight = 20;
+            this.listBoxProcesses.Location = new System.Drawing.Point(7, 36);
+            this.listBoxProcesses.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listBoxProcesses.Name = "listBoxProcesses";
-            this.listBoxProcesses.Size = new System.Drawing.Size(405, 482);
+            this.listBoxProcesses.Size = new System.Drawing.Size(539, 582);
             this.listBoxProcesses.TabIndex = 0;
             // 
             // buttonStart
             // 
             this.buttonStart.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonStart.Location = new System.Drawing.Point(1138, 3);
-            this.buttonStart.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonStart.Location = new System.Drawing.Point(1517, 4);
+            this.buttonStart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonStart.Name = "buttonStart";
-            this.buttonStart.Size = new System.Drawing.Size(97, 25);
+            this.buttonStart.Size = new System.Drawing.Size(129, 31);
             this.buttonStart.TabIndex = 1;
             this.buttonStart.Text = "Запустить";
             this.buttonStart.UseVisualStyleBackColor = true;
@@ -73,11 +74,11 @@ namespace KPv6
             this.listBoxLog.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.listBoxLog.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.listBoxLog.FormattingEnabled = true;
-            this.listBoxLog.ItemHeight = 16;
-            this.listBoxLog.Location = new System.Drawing.Point(578, 29);
-            this.listBoxLog.Margin = new System.Windows.Forms.Padding(2);
+            this.listBoxLog.ItemHeight = 20;
+            this.listBoxLog.Location = new System.Drawing.Point(771, 36);
+            this.listBoxLog.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listBoxLog.Name = "listBoxLog";
-            this.listBoxLog.Size = new System.Drawing.Size(657, 482);
+            this.listBoxLog.Size = new System.Drawing.Size(875, 582);
             this.listBoxLog.TabIndex = 2;
             // 
             // label1
@@ -85,9 +86,10 @@ namespace KPv6
             this.label1.AutoSize = true;
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(5, 10);
+            this.label1.Location = new System.Drawing.Point(7, 12);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 19);
+            this.label1.Size = new System.Drawing.Size(127, 22);
             this.label1.TabIndex = 3;
             this.label1.Text = "Все процессы";
             // 
@@ -96,9 +98,10 @@ namespace KPv6
             this.label2.AutoSize = true;
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(578, 10);
+            this.label2.Location = new System.Drawing.Point(771, 12);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(122, 19);
+            this.label2.Size = new System.Drawing.Size(149, 22);
             this.label2.TabIndex = 4;
             this.label2.Text = "Журнал событий";
             // 
@@ -106,9 +109,10 @@ namespace KPv6
             // 
             this.buttonStopProc.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonStopProc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonStopProc.Location = new System.Drawing.Point(123, 4);
+            this.buttonStopProc.Location = new System.Drawing.Point(164, 5);
+            this.buttonStopProc.Margin = new System.Windows.Forms.Padding(4);
             this.buttonStopProc.Name = "buttonStopProc";
-            this.buttonStopProc.Size = new System.Drawing.Size(287, 25);
+            this.buttonStopProc.Size = new System.Drawing.Size(383, 31);
             this.buttonStopProc.TabIndex = 5;
             this.buttonStopProc.Text = "Заблокировать/разблокировать процесс";
             this.buttonStopProc.UseVisualStyleBackColor = true;
@@ -118,9 +122,10 @@ namespace KPv6
             // 
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Location = new System.Drawing.Point(1106, 6);
+            this.textBox1.Location = new System.Drawing.Point(1475, 7);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(28, 20);
+            this.textBox1.Size = new System.Drawing.Size(37, 22);
             this.textBox1.TabIndex = 6;
             this.textBox1.Text = "15";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -130,9 +135,10 @@ namespace KPv6
             this.label3.AutoSize = true;
             this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(1055, 7);
+            this.label3.Location = new System.Drawing.Point(1407, 9);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(49, 19);
+            this.label3.Size = new System.Drawing.Size(62, 22);
             this.label3.TabIndex = 7;
             this.label3.Text = "Квант";
             // 
@@ -142,11 +148,11 @@ namespace KPv6
             this.listBoxTime.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.listBoxTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.listBoxTime.FormattingEnabled = true;
-            this.listBoxTime.ItemHeight = 16;
-            this.listBoxTime.Location = new System.Drawing.Point(535, 29);
-            this.listBoxTime.Margin = new System.Windows.Forms.Padding(2);
+            this.listBoxTime.ItemHeight = 20;
+            this.listBoxTime.Location = new System.Drawing.Point(713, 36);
+            this.listBoxTime.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listBoxTime.Name = "listBoxTime";
-            this.listBoxTime.Size = new System.Drawing.Size(39, 482);
+            this.listBoxTime.Size = new System.Drawing.Size(51, 582);
             this.listBoxTime.TabIndex = 8;
             this.listBoxTime.SelectedIndexChanged += new System.EventHandler(this.listBoxStateAndTime_SelectedIndexChanged);
             // 
@@ -156,20 +162,34 @@ namespace KPv6
             this.listBoxState.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.listBoxState.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.listBoxState.FormattingEnabled = true;
-            this.listBoxState.ItemHeight = 16;
-            this.listBoxState.Location = new System.Drawing.Point(411, 29);
-            this.listBoxState.Margin = new System.Windows.Forms.Padding(2);
+            this.listBoxState.ItemHeight = 20;
+            this.listBoxState.Location = new System.Drawing.Point(548, 36);
+            this.listBoxState.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listBoxState.Name = "listBoxState";
-            this.listBoxState.Size = new System.Drawing.Size(123, 482);
+            this.listBoxState.Size = new System.Drawing.Size(163, 582);
             this.listBoxState.TabIndex = 9;
             this.listBoxState.SelectedIndexChanged += new System.EventHandler(this.listBoxStateAndTime_SelectedIndexChanged);
             // 
-            // Form1
+            // buttonOpenManager
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.buttonOpenManager.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonOpenManager.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonOpenManager.Location = new System.Drawing.Point(927, 5);
+            this.buttonOpenManager.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonOpenManager.Name = "buttonOpenManager";
+            this.buttonOpenManager.Size = new System.Drawing.Size(271, 31);
+            this.buttonOpenManager.TabIndex = 10;
+            this.buttonOpenManager.Text = "Открыть редактор процессов";
+            this.buttonOpenManager.UseVisualStyleBackColor = true;
+            this.buttonOpenManager.Click += new System.EventHandler(this.buttonOpenManager_Click);
+            // 
+            // FormViewProcessing
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(216)))), ((int)(((byte)(146)))));
-            this.ClientSize = new System.Drawing.Size(1241, 517);
+            this.ClientSize = new System.Drawing.Size(1651, 622);
+            this.Controls.Add(this.buttonOpenManager);
             this.Controls.Add(this.listBoxState);
             this.Controls.Add(this.listBoxTime);
             this.Controls.Add(this.label3);
@@ -180,9 +200,9 @@ namespace KPv6
             this.Controls.Add(this.listBoxLog);
             this.Controls.Add(this.buttonStart);
             this.Controls.Add(this.listBoxProcesses);
-            this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Name = "FormViewProcessing";
+            this.Text = "View";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -201,6 +221,7 @@ namespace KPv6
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ListBox listBoxTime;
         private System.Windows.Forms.ListBox listBoxState;
+        private System.Windows.Forms.Button buttonOpenManager;
     }
 }
 

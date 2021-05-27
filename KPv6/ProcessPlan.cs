@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace KPv6
 {
-    class ProcessPlan
+    public class ProcessPlan
     {
         public List<Process> processes;
         public Processor processor;
@@ -18,14 +18,14 @@ namespace KPv6
         ListBox listBoxTime;
 
 
-        public ProcessPlan(ListBox listBoxL, ListBox listBoxP, ListBox listBoxS, ListBox listBoxT, int quantum)
+        public ProcessPlan(ListBox listBoxL, ListBox listBoxP, ListBox listBoxS, ListBox listBoxT, int quantum, List<Process> processes)
         {
-            processes = new List<Process>();
             processor = new Processor(listBoxL);
             this.listBoxLogs = listBoxL;
             this.listBoxProcesses = listBoxP;
             this.listBoxTime = listBoxT;
             this.listBoxState = listBoxS;
+            this.processes = processes;
             processor.quantum = quantum;
         }
 
