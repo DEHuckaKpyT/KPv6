@@ -35,6 +35,14 @@ namespace KPv6
             UpdateList();
         }
 
+        public void AddAllProcesses(List<Process> newProcesses)
+        {
+            List<Process> processes = new List<Process>(newProcesses);
+            this.processes.Clear();
+            this.processes.AddRange(processes);
+            UpdateList();
+        }
+
         public void StartWorking()//Запуск Планировщика процессов
         {
             listBoxLogs.Invoke(new Action(() => listBoxLogs.Items.Add($"Квант равен {processor.quantum}")));

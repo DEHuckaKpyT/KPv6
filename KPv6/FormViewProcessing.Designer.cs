@@ -50,7 +50,7 @@ namespace KPv6
             this.listBoxProcesses.FormattingEnabled = true;
             this.listBoxProcesses.ItemHeight = 16;
             this.listBoxProcesses.Location = new System.Drawing.Point(5, 29);
-            this.listBoxProcesses.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listBoxProcesses.Margin = new System.Windows.Forms.Padding(2);
             this.listBoxProcesses.Name = "listBoxProcesses";
             this.listBoxProcesses.Size = new System.Drawing.Size(405, 466);
             this.listBoxProcesses.TabIndex = 0;
@@ -59,12 +59,12 @@ namespace KPv6
             // 
             this.buttonStart.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonStart.Location = new System.Drawing.Point(1138, 3);
-            this.buttonStart.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonStart.Location = new System.Drawing.Point(1084, 3);
+            this.buttonStart.Margin = new System.Windows.Forms.Padding(2);
             this.buttonStart.Name = "buttonStart";
-            this.buttonStart.Size = new System.Drawing.Size(97, 25);
+            this.buttonStart.Size = new System.Drawing.Size(151, 25);
             this.buttonStart.TabIndex = 1;
-            this.buttonStart.Text = "Запустить";
+            this.buttonStart.Text = "Запустить/обновить";
             this.buttonStart.UseVisualStyleBackColor = true;
             this.buttonStart.Click += new System.EventHandler(this.buttonStart_Click);
             // 
@@ -76,7 +76,7 @@ namespace KPv6
             this.listBoxLog.FormattingEnabled = true;
             this.listBoxLog.ItemHeight = 16;
             this.listBoxLog.Location = new System.Drawing.Point(578, 29);
-            this.listBoxLog.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listBoxLog.Margin = new System.Windows.Forms.Padding(2);
             this.listBoxLog.Name = "listBoxLog";
             this.listBoxLog.Size = new System.Drawing.Size(657, 466);
             this.listBoxLog.TabIndex = 2;
@@ -119,11 +119,11 @@ namespace KPv6
             // 
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Location = new System.Drawing.Point(1106, 6);
+            this.textBox1.Location = new System.Drawing.Point(1041, 6);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(28, 20);
             this.textBox1.TabIndex = 6;
-            this.textBox1.Text = "15";
+            this.textBox1.Text = "11";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label3
@@ -131,7 +131,7 @@ namespace KPv6
             this.label3.AutoSize = true;
             this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(1055, 7);
+            this.label3.Location = new System.Drawing.Point(990, 7);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(49, 19);
             this.label3.TabIndex = 7;
@@ -145,7 +145,7 @@ namespace KPv6
             this.listBoxTime.FormattingEnabled = true;
             this.listBoxTime.ItemHeight = 16;
             this.listBoxTime.Location = new System.Drawing.Point(535, 29);
-            this.listBoxTime.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listBoxTime.Margin = new System.Windows.Forms.Padding(2);
             this.listBoxTime.Name = "listBoxTime";
             this.listBoxTime.Size = new System.Drawing.Size(39, 466);
             this.listBoxTime.TabIndex = 8;
@@ -159,7 +159,7 @@ namespace KPv6
             this.listBoxState.FormattingEnabled = true;
             this.listBoxState.ItemHeight = 16;
             this.listBoxState.Location = new System.Drawing.Point(411, 29);
-            this.listBoxState.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listBoxState.Margin = new System.Windows.Forms.Padding(2);
             this.listBoxState.Name = "listBoxState";
             this.listBoxState.Size = new System.Drawing.Size(123, 466);
             this.listBoxState.TabIndex = 9;
@@ -170,7 +170,7 @@ namespace KPv6
             this.buttonOpenManager.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonOpenManager.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonOpenManager.Location = new System.Drawing.Point(705, 2);
-            this.buttonOpenManager.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonOpenManager.Margin = new System.Windows.Forms.Padding(2);
             this.buttonOpenManager.Name = "buttonOpenManager";
             this.buttonOpenManager.Size = new System.Drawing.Size(215, 25);
             this.buttonOpenManager.TabIndex = 10;
@@ -195,7 +195,7 @@ namespace KPv6
             this.Controls.Add(this.listBoxLog);
             this.Controls.Add(this.buttonStart);
             this.Controls.Add(this.listBoxProcesses);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormViewProcessing";
             this.Text = "View";
             this.Load += new System.EventHandler(this.Form1_Load);

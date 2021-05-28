@@ -18,6 +18,7 @@ namespace KPv6
         Thread thread;
         FormManageProcesses formMeneger;
         List<Process> allProcesses;
+        List<Process> processesForStart;
         public FormViewProcessing()
         {
             InitializeComponent();
@@ -25,8 +26,31 @@ namespace KPv6
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            Methods methods;
+            processesForStart = new List<Process>();
+            methods = new Methods(listBoxLog, 3, 0.5, 'p');
+            processesForStart.Add(new Process("Вывод значений элементов последовательности", "Значения последовательности", 40, methods.PrintValuesOfSequence, "Задан изначально"));
+            methods = new Methods(listBoxLog, 3, 0.2, 'e');
+            processesForStart.Add(new Process("Вывод символа", "Указанный символ", 5, methods.PrintChar, "Задан изначально"));
+            methods = new Methods(listBoxLog, 2, 0.5, 'f');
+            processesForStart.Add(new Process("Вывод текущего времени", "Текущая дата", 13, methods.PrintDate, "Задан изначально"));
+            methods = new Methods(listBoxLog, 1, 0.7, 'a');
+            processesForStart.Add(new Process("Вывод символа", "Указанный символ", 16, methods.PrintChar, "Задан изначально"));
+            methods = new Methods(listBoxLog, 4, 0.5, 'q');
+            processesForStart.Add(new Process("Вывод текущего времени", "Текущая дата", 19, methods.PrintDate, "Задан изначально"));
+            methods = new Methods(listBoxLog, 5, 0.5, 'z');
+            processesForStart.Add(new Process("Вывод значений элементов последовательности", "Значения последовательности", 56, methods.PrintValuesOfSequence, "Задан изначально"));
+            methods = new Methods(listBoxLog, 3, 0.4, 'c');
+            processesForStart.Add(new Process("Вывод символа", "Указанный символ", 44, methods.PrintChar, "Задан изначально"));
+            methods = new Methods(listBoxLog, 1, 0.5, 'v');
+            processesForStart.Add(new Process("Вывод текущего времени", "Текущая дата", 33, methods.PrintDate, "Задан изначально"));
+            methods = new Methods(listBoxLog, 2, 0.7, 'x');
+            processesForStart.Add(new Process("Вывод символа", "Указанный символ", 36, methods.PrintChar, "Задан изначально"));
+            methods = new Methods(listBoxLog, 3, 0.9, '.');
+            processesForStart.Add(new Process("Вывод текущего времени", "Текущая дата", 59, methods.PrintDate, "Задан изначально"));
+
             RefreshProcesses();
-            formMeneger = new FormManageProcesses(allProcesses, listBoxProcesses, listBoxLog, processPlan);
+            formMeneger = new FormManageProcesses(processesForStart, listBoxProcesses, listBoxLog, processPlan);
         }
 
         private void buttonStart_Click(object sender, EventArgs e)
@@ -65,27 +89,12 @@ namespace KPv6
         {
             listBoxLog.Items.Clear();
             allProcesses = new List<Process>();
+            foreach (Process process in processesForStart)
+            {
+                allProcesses.Add(new Process(process.name, process.nameMethod, process.workingTime, process.method, process.description));
+            }
             processPlan = new ProcessPlan(listBoxLog, listBoxProcesses, listBoxState, listBoxTime, int.Parse(textBox1.Text), allProcesses);
-            Methods methods = new Methods(listBoxLog, 3, 0.5, 'p');
-            processPlan.AddProcess(new Process("Вывод значений элементов последовательности", "Значения последовательности", 40, methods.PrintValuesOfSequence, "Задан изначально"));
-            methods = new Methods(listBoxLog, 3, 0.2, 'e');
-            processPlan.AddProcess(new Process("Вывод символа", "Указанный символ", 5, methods.PrintChar, "Задан изначально"));
-            methods = new Methods(listBoxLog, 2, 0.5, 'f');
-            processPlan.AddProcess(new Process("Вывод текущего времени", "Текущая дата", 13, methods.PrintDate, "Задан изначально"));
-            methods = new Methods(listBoxLog, 1, 0.7, 'a');
-            processPlan.AddProcess(new Process("Вывод символа", "Указанный символ", 16, methods.PrintChar, "Задан изначально"));
-            methods = new Methods(listBoxLog, 4, 0.5, 'q');
-            processPlan.AddProcess(new Process("Вывод текущего времени", "Текущая дата", 19, methods.PrintDate, "Задан изначально"));
-            methods = new Methods(listBoxLog, 5, 0.5, 'z');
-            processPlan.AddProcess(new Process("Вывод значений элементов последовательности", "Значения последовательности", 56, methods.PrintValuesOfSequence, "Задан изначально"));
-            methods = new Methods(listBoxLog, 3, 0.4, 'c');
-            processPlan.AddProcess(new Process("Вывод символа", "Указанный символ", 44, methods.PrintChar, "Задан изначально"));
-            methods = new Methods(listBoxLog, 1, 0.5, 'v');
-            processPlan.AddProcess(new Process("Вывод текущего времени", "Текущая дата", 33, methods.PrintDate, "Задан изначально"));
-            methods = new Methods(listBoxLog, 2, 0.7, 'x');
-            processPlan.AddProcess(new Process("Вывод символа", "Указанный символ", 36, methods.PrintChar, "Задан изначально"));
-            methods = new Methods(listBoxLog, 3, 0.9, '.');
-            processPlan.AddProcess(new Process("Вывод текущего времени", "Текущая дата", 59, methods.PrintDate, "Задан изначально"));
+            processPlan.UpdateList();
         }
 
         private void buttonOpenManager_Click(object sender, EventArgs e)

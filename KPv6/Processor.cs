@@ -10,7 +10,7 @@ namespace KPv6
 {
     public class Processor
     {
-        public int quantum;//размер кванта времени (не знаю, в чём измеряется)
+        public int quantum;//размер кванта времени
         ListBox listBox;
         public Processor(ListBox listBox)
         {
@@ -23,7 +23,7 @@ namespace KPv6
             int workTime = process.workingTime - currentQuantum < 0 ? process.workingTime : currentQuantum;
             additionalTime = currentQuantum - workTime;
             process.workingTime -= workTime;
-            Thread.Sleep(workTime * 40);
+            Thread.Sleep(workTime * 100);
             listBox.Invoke(new Action(() => listBox.Items.Add($"Процесс \"{process.name}\" был вытеснен через {workTime}")));
             return additionalTime;
         }
