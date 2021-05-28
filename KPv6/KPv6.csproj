@@ -72,6 +72,9 @@
     <Compile Include="ProcessState.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="System\Windows\Forms\MyListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <EmbeddedResource Include="FormChangeProcess.resx">
       <DependentUpon>FormChangeProcess.cs</DependentUpon>
     </EmbeddedResource>

@@ -112,10 +112,10 @@ namespace KPv6
             if (listBoxProcesses.SelectedIndex == e.Index)
             {
                 if (process.processState == ProcessState.Заблокирован) color = Color.FromArgb(255,140,140);
-                if (process.processState == ProcessState.Выполнен) color = Color.FromArgb(140, 255, 140);
+                if (process.processState == ProcessState.Выполнен) color = Color.FromArgb(170, 255, 170);
                 if (process.processState == ProcessState.Выполняется) color = Color.FromArgb(250, 255, 170);
                 if (process.processState == ProcessState.В_очереди) color = Color.FromArgb(160, 200, 255);
-                e.Graphics.DrawRectangle(new Pen(Color.Black, 2), e.Bounds);
+                e.Graphics.DrawRectangle(new Pen(Color.Black, 10), e.Bounds);
             }
             else
             {

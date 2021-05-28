@@ -29,7 +29,7 @@ namespace KPv6
         /// </summary>
         private void InitializeComponent()
         {
-            this.listBoxProcesses = new System.Windows.Forms.ListBox();
+            this.listBoxProcesses = new System.Windows.Forms.MyListBox();
             this.buttonStart = new System.Windows.Forms.Button();
             this.listBoxLog = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -209,7 +209,7 @@ namespace KPv6
 
         #endregion
 
-        private System.Windows.Forms.ListBox listBoxProcesses;
+        private System.Windows.Forms.MyListBox listBoxProcesses;
         private System.Windows.Forms.Button buttonStart;
         private System.Windows.Forms.ListBox listBoxLog;
         private System.Windows.Forms.Label label1;
