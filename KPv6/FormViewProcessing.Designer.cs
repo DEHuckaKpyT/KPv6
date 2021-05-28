@@ -230,7 +230,7 @@ namespace KPv6
             this.Name = "FormViewProcessing";
             this.Text = "View";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormViewProcessing_FormClosing);
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Load += new System.EventHandler(this.FormViewProcessing_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

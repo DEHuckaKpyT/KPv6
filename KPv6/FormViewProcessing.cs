@@ -24,7 +24,7 @@ namespace KPv6
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void FormViewProcessing_Load(object sender, EventArgs e)
         {
             Methods methods;
             processesForStart = new List<Process>();
