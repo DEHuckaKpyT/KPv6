@@ -34,7 +34,7 @@ namespace KPv6
             for (int i = 1; i < n; i++)
             {
                 double newX = Math.Sin(x);
-                forPrint += $" {newX.ToString():N2}";
+                forPrint += $" {newX:N2}";
                 x = newX;
             }
             listBox.Invoke(new Action(() => listBox.Items.Add("Результат выполнения \"" + forPrint + "\"")));

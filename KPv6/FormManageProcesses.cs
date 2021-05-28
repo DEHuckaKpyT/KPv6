@@ -54,7 +54,7 @@ namespace KPv6
             {
                 listBoxProcesses.Items.Add(process);
                 if (process.nameMethod == "Значения последовательности")
-                    listBoxProcessesExtented.Items.Add($"{process.workingTime + " мс",6} {process.nameMethod,-29} {$"n = {((Methods)process.method.Target).n}, x = {((Methods)process.method.Target).x}",-15} {process.description}");
+                    listBoxProcessesExtented.Items.Add($"{process.workingTime + " мс",6} {process.nameMethod,-29} {$"n = {((Methods)process.method.Target).n}, x = {((Methods)process.method.Target).x}",-15:2} {process.description}");
                 if (process.nameMethod == "Указанный символ")
                     listBoxProcessesExtented.Items.Add($"{process.workingTime + " мс",6} {process.nameMethod,-29} {$"Символ = {((Methods)process.method.Target).c}",-15} {process.description}");
                 if (process.nameMethod == "Текущая дата")
@@ -104,6 +104,28 @@ namespace KPv6
             formChangeProcess = new FormChangeProcess((Process)listBoxProcesses.SelectedItem, allProcesses, listBoxLog);
             formChangeProcess.ShowDialog();
             UpdateAllListBoxes();
+        }
+
+        private void buttonUp_Click(object sender, EventArgs e)
+        {
+            int index = listBoxProcesses.SelectedIndex;
+            if (index == 0 || index == 1 || listBoxProcesses.SelectedItem == null) return;
+            Process processTemp = allProcesses[index - 1];
+            allProcesses[index - 1] = allProcesses[index - 2];
+            allProcesses[index - 2] = processTemp;
+            UpdateAllListBoxes();
+            listBoxProcesses.SelectedIndex = index - 1;
+        }
+
+        private void buttonDown_Click(object sender, EventArgs e)
+        {
+            int index = listBoxProcesses.SelectedIndex;
+            if (index == listBoxProcesses.Items.Count - 1 || listBoxProcesses.SelectedItem == null) return;
+            Process processTemp = allProcesses[index - 1];
+            allProcesses[index - 1] = allProcesses[index];
+            allProcesses[index] = processTemp;
+            UpdateAllListBoxes();
+            listBoxProcesses.SelectedIndex = index + 1;
         }
     }
 }

@@ -16,9 +16,10 @@ namespace KPv6
         ListBox listBoxProcesses;
         ListBox listBoxState;
         ListBox listBoxTime;
+        Label labelQuantum;
 
-
-        public ProcessPlan(ListBox listBoxL, ListBox listBoxP, ListBox listBoxS, ListBox listBoxT, int quantum, List<Process> processes)
+        public ProcessPlan(ListBox listBoxL, ListBox listBoxP, ListBox listBoxS, ListBox listBoxT, int quantum, List<Process> processes,
+            Label labelQuantum)
         {
             processor = new Processor(listBoxL);
             this.listBoxLogs = listBoxL;
@@ -26,6 +27,7 @@ namespace KPv6
             this.listBoxTime = listBoxT;
             this.listBoxState = listBoxS;
             this.processes = processes;
+            this.labelQuantum = labelQuantum;
             processor.quantum = quantum;
         }
 
@@ -61,6 +63,7 @@ namespace KPv6
                     process.processState = ProcessState.Выполняется;
                     UpdateList();
                     additionalTime = processor.RunProcess(process, additionalTime);
+                    labelQuantum.Invoke(new Action(() => labelQuantum.Text = $"Доп время кванта = {additionalTime}"));
                     listBoxLogs.Invoke(new Action(() => listBoxLogs.Items.Add($"Дополнительное время = {additionalTime}")));
                     listBoxLogs.Invoke(new Action(() => listBoxLogs.SelectedIndex = listBoxLogs.Items.Count - 1));
                     listBoxLogs.Invoke(new Action(() => listBoxLogs.SelectedItem = null));

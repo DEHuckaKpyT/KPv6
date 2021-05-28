@@ -23,7 +23,7 @@ namespace KPv6
             int workTime = process.workingTime - currentQuantum < 0 ? process.workingTime : currentQuantum;
             additionalTime = currentQuantum - workTime;
             process.workingTime -= workTime;
-            Thread.Sleep(workTime * 100);
+            Thread.Sleep(workTime * 40);
             listBox.Invoke(new Action(() => listBox.Items.Add($"Процесс \"{process.name}\" был вытеснен через {workTime}")));
             return additionalTime;
         }

@@ -40,6 +40,8 @@ namespace KPv6
             this.listBoxTime = new System.Windows.Forms.ListBox();
             this.listBoxState = new System.Windows.Forms.ListBox();
             this.buttonOpenManager = new System.Windows.Forms.Button();
+            this.buttonReset = new System.Windows.Forms.Button();
+            this.labelQuantum = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // listBoxProcesses
@@ -62,12 +64,12 @@ namespace KPv6
             // 
             this.buttonStart.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonStart.Location = new System.Drawing.Point(1084, 3);
+            this.buttonStart.Location = new System.Drawing.Point(1009, 2);
             this.buttonStart.Margin = new System.Windows.Forms.Padding(2);
             this.buttonStart.Name = "buttonStart";
-            this.buttonStart.Size = new System.Drawing.Size(151, 25);
+            this.buttonStart.Size = new System.Drawing.Size(147, 25);
             this.buttonStart.TabIndex = 1;
-            this.buttonStart.Text = "Запустить/обновить";
+            this.buttonStart.Text = "Запустить";
             this.buttonStart.UseVisualStyleBackColor = true;
             this.buttonStart.Click += new System.EventHandler(this.buttonStart_Click);
             // 
@@ -122,19 +124,19 @@ namespace KPv6
             // 
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Location = new System.Drawing.Point(1041, 6);
+            this.textBox1.Location = new System.Drawing.Point(976, 6);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(28, 20);
             this.textBox1.TabIndex = 6;
             this.textBox1.Text = "11";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(990, 7);
+            this.label3.Location = new System.Drawing.Point(925, 7);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(49, 19);
             this.label3.TabIndex = 7;
@@ -181,12 +183,38 @@ namespace KPv6
             this.buttonOpenManager.UseVisualStyleBackColor = true;
             this.buttonOpenManager.Click += new System.EventHandler(this.buttonOpenManager_Click);
             // 
+            // buttonReset
+            // 
+            this.buttonReset.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonReset.Location = new System.Drawing.Point(1160, 2);
+            this.buttonReset.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonReset.Name = "buttonReset";
+            this.buttonReset.Size = new System.Drawing.Size(67, 25);
+            this.buttonReset.TabIndex = 11;
+            this.buttonReset.Text = "Сброс";
+            this.buttonReset.UseVisualStyleBackColor = true;
+            this.buttonReset.Click += new System.EventHandler(this.buttonReset_Click);
+            // 
+            // labelQuantum
+            // 
+            this.labelQuantum.AutoSize = true;
+            this.labelQuantum.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.labelQuantum.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelQuantum.Location = new System.Drawing.Point(416, 8);
+            this.labelQuantum.Name = "labelQuantum";
+            this.labelQuantum.Size = new System.Drawing.Size(154, 19);
+            this.labelQuantum.TabIndex = 12;
+            this.labelQuantum.Text = "Доп время кванта = 0";
+            // 
             // FormViewProcessing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(216)))), ((int)(((byte)(146)))));
             this.ClientSize = new System.Drawing.Size(1238, 505);
+            this.Controls.Add(this.labelQuantum);
+            this.Controls.Add(this.buttonReset);
             this.Controls.Add(this.buttonOpenManager);
             this.Controls.Add(this.listBoxState);
             this.Controls.Add(this.listBoxTime);
@@ -220,6 +248,8 @@ namespace KPv6
         private System.Windows.Forms.ListBox listBoxTime;
         private System.Windows.Forms.ListBox listBoxState;
         private System.Windows.Forms.Button buttonOpenManager;
+        private System.Windows.Forms.Button buttonReset;
+        private System.Windows.Forms.Label labelQuantum;
     }
 }
 

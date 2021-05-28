@@ -50,16 +50,9 @@ namespace KPv6
             processesForStart.Add(new Process("Вывод текущего времени", "Текущая дата", 59, methods.PrintDate, "Задан изначально"));
 
             RefreshProcesses();
-            formMeneger = new FormManageProcesses(processesForStart, listBoxProcesses, listBoxLog, processPlan);
-        }
-
-        private void buttonStart_Click(object sender, EventArgs e)
-        {
-            if (thread != null) thread.Abort();
-            RefreshProcesses();
             processPlan.processor.quantum = int.Parse(textBox1.Text);
+            formMeneger = new FormManageProcesses(processesForStart, listBoxProcesses, listBoxLog, processPlan);
             thread = new Thread(new ThreadStart(processPlan.StartWorking));
-            thread.Start();
         }
 
         private void buttonStopProc_Click(object sender, EventArgs e)
@@ -93,13 +86,15 @@ namespace KPv6
             {
                 allProcesses.Add(new Process(process.name, process.nameMethod, process.workingTime, process.method, process.description));
             }
-            processPlan = new ProcessPlan(listBoxLog, listBoxProcesses, listBoxState, listBoxTime, int.Parse(textBox1.Text), allProcesses);
+            processPlan = new ProcessPlan(listBoxLog, listBoxProcesses, listBoxState, listBoxTime, 
+                int.Parse(textBox1.Text), allProcesses, labelQuantum);
             processPlan.UpdateList();
         }
 
         private void buttonOpenManager_Click(object sender, EventArgs e)
         {
             formMeneger.ShowDialog();
+            Reset();
         }
 
         private void listBoxProcesses_DrawItem(object sender, DrawItemEventArgs e)
@@ -134,6 +129,47 @@ namespace KPv6
         private void listBoxProcesses_SelectedIndexChanged(object sender, EventArgs e)
         {
             listBoxProcesses.Invalidate();
+        }
+
+        private void buttonReset_Click(object sender, EventArgs e)
+        {
+            Reset();
+        }
+        void Reset()
+        {
+            if (thread.ThreadState == ThreadState.Suspended) thread.Resume();
+            thread.Abort();
+            buttonStart.Text = "Запустить";
+            RefreshProcesses();
+            processPlan.processor.quantum = int.Parse(textBox1.Text);
+            thread = new Thread(new ThreadStart(processPlan.StartWorking));
+        }
+
+        private void buttonStart_Click(object sender, EventArgs e)
+        {
+            Button button = ((Button)sender);
+            string name = button.Text;
+            if (name == "Запустить")
+            {
+                if (thread.ThreadState == ThreadState.Suspended)
+                {
+                    thread.Resume();
+                    button.Text = "Приостановить";
+                }
+                else
+                {
+                    thread.Start();
+                    button.Text = "Приостановить";
+                }
+            }
+            else
+            {
+                if (thread.ThreadState == ThreadState.Running || thread.ThreadState == ThreadState.WaitSleepJoin)
+                {
+                    thread.Suspend();
+                    button.Text = "Запустить";
+                }
+            }
         }
     }
 }
