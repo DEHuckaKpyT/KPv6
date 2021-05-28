@@ -171,5 +171,11 @@ namespace KPv6
                 }
             }
         }
+
+        private void FormViewProcessing_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (thread.ThreadState == ThreadState.Suspended) thread.Resume();
+            thread.Abort();
+        }
     }
 }

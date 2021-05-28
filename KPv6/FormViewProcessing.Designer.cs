@@ -29,7 +29,6 @@ namespace KPv6
         /// </summary>
         private void InitializeComponent()
         {
-            this.listBoxProcesses = new System.Windows.Forms.MyListBox();
             this.buttonStart = new System.Windows.Forms.Button();
             this.listBoxLog = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -42,23 +41,8 @@ namespace KPv6
             this.buttonOpenManager = new System.Windows.Forms.Button();
             this.buttonReset = new System.Windows.Forms.Button();
             this.labelQuantum = new System.Windows.Forms.Label();
+            this.listBoxProcesses = new System.Windows.Forms.MyListBox();
             this.SuspendLayout();
-            // 
-            // listBoxProcesses
-            // 
-            this.listBoxProcesses.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(191)))));
-            this.listBoxProcesses.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.listBoxProcesses.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.listBoxProcesses.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.listBoxProcesses.FormattingEnabled = true;
-            this.listBoxProcesses.ItemHeight = 16;
-            this.listBoxProcesses.Location = new System.Drawing.Point(5, 29);
-            this.listBoxProcesses.Margin = new System.Windows.Forms.Padding(2);
-            this.listBoxProcesses.Name = "listBoxProcesses";
-            this.listBoxProcesses.Size = new System.Drawing.Size(405, 466);
-            this.listBoxProcesses.TabIndex = 0;
-            this.listBoxProcesses.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.listBoxProcesses_DrawItem);
-            this.listBoxProcesses.SelectedIndexChanged += new System.EventHandler(this.listBoxProcesses_SelectedIndexChanged);
             // 
             // buttonStart
             // 
@@ -201,11 +185,27 @@ namespace KPv6
             this.labelQuantum.AutoSize = true;
             this.labelQuantum.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelQuantum.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelQuantum.Location = new System.Drawing.Point(416, 8);
+            this.labelQuantum.Location = new System.Drawing.Point(411, 8);
             this.labelQuantum.Name = "labelQuantum";
             this.labelQuantum.Size = new System.Drawing.Size(154, 19);
             this.labelQuantum.TabIndex = 12;
             this.labelQuantum.Text = "Доп время кванта = 0";
+            // 
+            // listBoxProcesses
+            // 
+            this.listBoxProcesses.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(191)))));
+            this.listBoxProcesses.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.listBoxProcesses.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.listBoxProcesses.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.listBoxProcesses.FormattingEnabled = true;
+            this.listBoxProcesses.ItemHeight = 16;
+            this.listBoxProcesses.Location = new System.Drawing.Point(5, 29);
+            this.listBoxProcesses.Margin = new System.Windows.Forms.Padding(2);
+            this.listBoxProcesses.Name = "listBoxProcesses";
+            this.listBoxProcesses.Size = new System.Drawing.Size(405, 466);
+            this.listBoxProcesses.TabIndex = 0;
+            this.listBoxProcesses.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.listBoxProcesses_DrawItem);
+            this.listBoxProcesses.SelectedIndexChanged += new System.EventHandler(this.listBoxProcesses_SelectedIndexChanged);
             // 
             // FormViewProcessing
             // 
@@ -229,6 +229,7 @@ namespace KPv6
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormViewProcessing";
             this.Text = "View";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormViewProcessing_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

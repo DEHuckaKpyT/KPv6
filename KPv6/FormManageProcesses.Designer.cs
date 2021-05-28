@@ -40,10 +40,11 @@ namespace KPv6
             // 
             // listBoxProcesses
             // 
+            this.listBoxProcesses.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(191)))));
             this.listBoxProcesses.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.listBoxProcesses.FormattingEnabled = true;
             this.listBoxProcesses.ItemHeight = 15;
-            this.listBoxProcesses.Location = new System.Drawing.Point(33, 48);
+            this.listBoxProcesses.Location = new System.Drawing.Point(36, 32);
             this.listBoxProcesses.Margin = new System.Windows.Forms.Padding(2);
             this.listBoxProcesses.Name = "listBoxProcesses";
             this.listBoxProcesses.Size = new System.Drawing.Size(344, 409);
@@ -53,8 +54,9 @@ namespace KPv6
             // 
             // buttonDelete
             // 
+            this.buttonDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonDelete.Location = new System.Drawing.Point(255, 11);
+            this.buttonDelete.Location = new System.Drawing.Point(945, 2);
             this.buttonDelete.Margin = new System.Windows.Forms.Padding(2);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(118, 26);
@@ -65,8 +67,9 @@ namespace KPv6
             // 
             // buttonAddProcess
             // 
+            this.buttonAddProcess.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonAddProcess.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonAddProcess.Location = new System.Drawing.Point(133, 11);
+            this.buttonAddProcess.Location = new System.Drawing.Point(823, 2);
             this.buttonAddProcess.Margin = new System.Windows.Forms.Padding(2);
             this.buttonAddProcess.Name = "buttonAddProcess";
             this.buttonAddProcess.Size = new System.Drawing.Size(118, 26);
@@ -77,8 +80,9 @@ namespace KPv6
             // 
             // buttonChange
             // 
+            this.buttonChange.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonChange.Location = new System.Drawing.Point(11, 11);
+            this.buttonChange.Location = new System.Drawing.Point(701, 2);
             this.buttonChange.Margin = new System.Windows.Forms.Padding(2);
             this.buttonChange.Name = "buttonChange";
             this.buttonChange.Size = new System.Drawing.Size(118, 26);
@@ -89,10 +93,11 @@ namespace KPv6
             // 
             // listBoxProcessesExtented
             // 
+            this.listBoxProcessesExtented.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(191)))));
             this.listBoxProcessesExtented.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.listBoxProcessesExtented.FormattingEnabled = true;
             this.listBoxProcessesExtented.ItemHeight = 15;
-            this.listBoxProcessesExtented.Location = new System.Drawing.Point(377, 48);
+            this.listBoxProcessesExtented.Location = new System.Drawing.Point(380, 32);
             this.listBoxProcessesExtented.Margin = new System.Windows.Forms.Padding(2);
             this.listBoxProcessesExtented.Name = "listBoxProcessesExtented";
             this.listBoxProcessesExtented.Size = new System.Drawing.Size(683, 409);
@@ -102,8 +107,9 @@ namespace KPv6
             // 
             // buttonUp
             // 
+            this.buttonUp.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonUp.Location = new System.Drawing.Point(2, 177);
+            this.buttonUp.Location = new System.Drawing.Point(5, 161);
             this.buttonUp.Name = "buttonUp";
             this.buttonUp.Size = new System.Drawing.Size(26, 41);
             this.buttonUp.TabIndex = 5;
@@ -113,8 +119,9 @@ namespace KPv6
             // 
             // buttonDown
             // 
+            this.buttonDown.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonDown.Location = new System.Drawing.Point(2, 224);
+            this.buttonDown.Location = new System.Drawing.Point(5, 208);
             this.buttonDown.Name = "buttonDown";
             this.buttonDown.Size = new System.Drawing.Size(26, 41);
             this.buttonDown.TabIndex = 6;
@@ -126,7 +133,8 @@ namespace KPv6
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1166, 468);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(216)))), ((int)(((byte)(146)))));
+            this.ClientSize = new System.Drawing.Size(1070, 446);
             this.Controls.Add(this.buttonDown);
             this.Controls.Add(this.buttonUp);
             this.Controls.Add(this.listBoxProcessesExtented);

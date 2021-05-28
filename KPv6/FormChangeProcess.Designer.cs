@@ -49,9 +49,10 @@ namespace KPv6
             // 
             // buttonSaveChanges
             // 
+            this.buttonSaveChanges.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonSaveChanges.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonSaveChanges.Location = new System.Drawing.Point(211, 277);
-            this.buttonSaveChanges.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonSaveChanges.Location = new System.Drawing.Point(310, 24);
+            this.buttonSaveChanges.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSaveChanges.Name = "buttonSaveChanges";
             this.buttonSaveChanges.Size = new System.Drawing.Size(112, 35);
             this.buttonSaveChanges.TabIndex = 0;
@@ -61,9 +62,10 @@ namespace KPv6
             // 
             // textBoxNameProcess
             // 
+            this.textBoxNameProcess.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(191)))));
             this.textBoxNameProcess.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxNameProcess.Location = new System.Drawing.Point(20, 30);
-            this.textBoxNameProcess.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxNameProcess.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxNameProcess.Name = "textBoxNameProcess";
             this.textBoxNameProcess.Size = new System.Drawing.Size(224, 29);
             this.textBoxNameProcess.TabIndex = 1;
@@ -71,9 +73,10 @@ namespace KPv6
             // 
             // textBoxWorkingTime
             // 
+            this.textBoxWorkingTime.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(191)))));
             this.textBoxWorkingTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxWorkingTime.Location = new System.Drawing.Point(20, 72);
-            this.textBoxWorkingTime.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxWorkingTime.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxWorkingTime.Name = "textBoxWorkingTime";
             this.textBoxWorkingTime.Size = new System.Drawing.Size(224, 29);
             this.textBoxWorkingTime.TabIndex = 2;
@@ -81,10 +84,11 @@ namespace KPv6
             // 
             // comboBoxMethodProcess
             // 
+            this.comboBoxMethodProcess.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(191)))));
             this.comboBoxMethodProcess.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBoxMethodProcess.FormattingEnabled = true;
             this.comboBoxMethodProcess.Location = new System.Drawing.Point(20, 115);
-            this.comboBoxMethodProcess.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxMethodProcess.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxMethodProcess.Name = "comboBoxMethodProcess";
             this.comboBoxMethodProcess.Size = new System.Drawing.Size(224, 32);
             this.comboBoxMethodProcess.TabIndex = 3;
@@ -114,9 +118,10 @@ namespace KPv6
             // 
             // textBoxN
             // 
+            this.textBoxN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(191)))));
             this.textBoxN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxN.Location = new System.Drawing.Point(311, 107);
-            this.textBoxN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxN.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxN.Name = "textBoxN";
             this.textBoxN.Size = new System.Drawing.Size(47, 26);
             this.textBoxN.TabIndex = 6;
@@ -124,9 +129,10 @@ namespace KPv6
             // 
             // textBoxX
             // 
+            this.textBoxX.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(191)))));
             this.textBoxX.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxX.Location = new System.Drawing.Point(311, 131);
-            this.textBoxX.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxX.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxX.Name = "textBoxX";
             this.textBoxX.Size = new System.Drawing.Size(47, 26);
             this.textBoxX.TabIndex = 7;
@@ -134,9 +140,10 @@ namespace KPv6
             // 
             // buttonCancel
             // 
+            this.buttonCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonCancel.Location = new System.Drawing.Point(328, 277);
-            this.buttonCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonCancel.Location = new System.Drawing.Point(427, 24);
+            this.buttonCancel.Margin = new System.Windows.Forms.Padding(2);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(112, 35);
             this.buttonCancel.TabIndex = 8;
@@ -176,9 +183,10 @@ namespace KPv6
             // 
             // textBoxChar
             // 
+            this.textBoxChar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(191)))));
             this.textBoxChar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxChar.Location = new System.Drawing.Point(328, 121);
-            this.textBoxChar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxChar.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxChar.Name = "textBoxChar";
             this.textBoxChar.Size = new System.Drawing.Size(47, 26);
             this.textBoxChar.TabIndex = 13;
@@ -197,6 +205,7 @@ namespace KPv6
             // 
             // textBoxDescription
             // 
+            this.textBoxDescription.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(191)))));
             this.textBoxDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxDescription.Location = new System.Drawing.Point(21, 161);
             this.textBoxDescription.Margin = new System.Windows.Forms.Padding(2);
@@ -219,7 +228,8 @@ namespace KPv6
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(550, 342);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(216)))), ((int)(((byte)(146)))));
+            this.ClientSize = new System.Drawing.Size(550, 199);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBoxDescription);
             this.Controls.Add(this.textBoxChar);
@@ -236,7 +246,7 @@ namespace KPv6
             this.Controls.Add(this.textBoxWorkingTime);
             this.Controls.Add(this.textBoxNameProcess);
             this.Controls.Add(this.buttonSaveChanges);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormChangeProcess";
             this.Text = "FormChangeProcess";
             this.Load += new System.EventHandler(this.FormChangeProcess_Load);

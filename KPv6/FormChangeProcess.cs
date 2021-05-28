@@ -63,14 +63,17 @@ namespace KPv6
                     case "Указанный символ":
                         process.method = methods.PrintChar;
                         methods.c = Convert.ToChar(textBoxChar.Text);
+                        process.nameMethod = "Указанный символ";
                         break;
                     case "Значения последовательности":
                         process.method = methods.PrintValuesOfSequence;
                         methods.n = int.Parse(textBoxN.Text);
                         methods.x = Convert.ToDouble(textBoxX.Text);
+                        process.nameMethod = "Значения последовательности";
                         break;
                     case "Текущая дата":
                         process.method = methods.PrintDate;
+                        process.nameMethod = "Текущая дата";
                         break;
                 }
             }
