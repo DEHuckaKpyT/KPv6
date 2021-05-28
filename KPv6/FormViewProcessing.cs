@@ -76,7 +76,7 @@ namespace KPv6
                 else if (lastSelectedProcess.processState == ProcessState.Заблокирован)
                     lastSelectedProcess.processState = ProcessState.В_очереди;
             }
-
+            listBoxProcesses.SelectedItem = null;
             processPlan.UpdateList();
         }
 
@@ -100,6 +100,40 @@ namespace KPv6
         private void buttonOpenManager_Click(object sender, EventArgs e)
         {
             formMeneger.ShowDialog();
+        }
+
+        private void listBoxProcesses_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            if (e.Index == -1) return;
+            e.DrawBackground();
+            Process process = (Process)((ListBox)sender).Items[e.Index];
+            string text = process.ToString();
+            Color color = Color.White;
+            if (listBoxProcesses.SelectedIndex == e.Index)
+            {
+                if (process.processState == ProcessState.Заблокирован) color = Color.FromArgb(255,140,140);
+                if (process.processState == ProcessState.Выполнен) color = Color.FromArgb(140, 255, 140);
+                if (process.processState == ProcessState.Выполняется) color = Color.FromArgb(250, 255, 170);
+                if (process.processState == ProcessState.В_очереди) color = Color.FromArgb(160, 200, 255);
+                e.Graphics.DrawRectangle(new Pen(Color.Black, 2), e.Bounds);
+            }
+            else
+            {
+                if (process.processState == ProcessState.Заблокирован) color = Color.FromArgb(255, 70, 70);
+                if (process.processState == ProcessState.Выполнен) color = Color.FromArgb(70, 255, 70);
+                if (process.processState == ProcessState.Выполняется) color = Color.FromArgb(250, 255, 100);
+                if (process.processState == ProcessState.В_очереди) color = Color.FromArgb(80, 150, 255);
+            }
+
+            e.Graphics.FillRectangle(new SolidBrush(color), e.Bounds);
+            e.Graphics.DrawString(text,
+                    e.Font, Brushes.Black, e.Bounds, StringFormat.GenericDefault);
+            e.DrawFocusRectangle();
+        }
+
+        private void listBoxProcesses_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            listBoxProcesses.Invalidate();
         }
     }
 }

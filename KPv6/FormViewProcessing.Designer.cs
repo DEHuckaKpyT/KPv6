@@ -46,6 +46,7 @@ namespace KPv6
             // 
             this.listBoxProcesses.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(191)))));
             this.listBoxProcesses.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.listBoxProcesses.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.listBoxProcesses.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.listBoxProcesses.FormattingEnabled = true;
             this.listBoxProcesses.ItemHeight = 16;
@@ -54,6 +55,8 @@ namespace KPv6
             this.listBoxProcesses.Name = "listBoxProcesses";
             this.listBoxProcesses.Size = new System.Drawing.Size(405, 466);
             this.listBoxProcesses.TabIndex = 0;
+            this.listBoxProcesses.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.listBoxProcesses_DrawItem);
+            this.listBoxProcesses.SelectedIndexChanged += new System.EventHandler(this.listBoxProcesses_SelectedIndexChanged);
             // 
             // buttonStart
             // 
