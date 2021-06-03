@@ -44,9 +44,7 @@ namespace KPv6
                 comboBoxMethodProcess.SelectedItem = process.nameMethod;
             }
             else
-            {
                 comboBoxMethodProcess.SelectedItem = "Текущая дата";
-            }
         }
 
         private void buttonSaveChanges_Click(object sender, EventArgs e)
@@ -88,21 +86,24 @@ namespace KPv6
                             (string)comboBoxMethodProcess.SelectedItem,
                             int.Parse(textBoxWorkingTime.Text),
                             new Action(curMethod.PrintChar), 
-                            textBoxDescription.Text));
+                            textBoxDescription.Text,
+                            processes.Max(x => x.id) + 1));
                         break;
                     case "Значения последовательности":
                         processes.Add(new Process(textBoxNameProcess.Text,
                             (string)comboBoxMethodProcess.SelectedItem,
                             int.Parse(textBoxWorkingTime.Text),
                             new Action(curMethod.PrintValuesOfSequence),
-                            textBoxDescription.Text));
+                            textBoxDescription.Text,
+                            processes.Max(x => x.id) + 1));
                         break;
                     case "Текущая дата":
                         processes.Add(new Process(textBoxNameProcess.Text,
                             (string)comboBoxMethodProcess.SelectedItem,
                             int.Parse(textBoxWorkingTime.Text),
                             new Action(curMethod.PrintDate),
-                            textBoxDescription.Text));
+                            textBoxDescription.Text,
+                            processes.Max(x => x.id) + 1));
                         break;
                 }
             }

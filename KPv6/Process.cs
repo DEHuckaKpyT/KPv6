@@ -8,6 +8,7 @@ namespace KPv6
 {
     public class Process
     {
+        public int id;
         public string name;
         public int workingTime;//общее время его выполнения
         public Action method;//задача процесса
@@ -15,8 +16,17 @@ namespace KPv6
         public ProcessState processState;
         public string description;
 
-        public Process(string name, string nameMethod, int time, Action method, string description = "")
+        public static int lastId;
+
+        public Process(string name, string nameMethod, int time, Action method, string description, int id = -1)
         {
+            if (id != -1)
+                this.id = id;
+            else
+            {
+                this.id = lastId;
+                lastId++;
+            }
             this.name = name;
             workingTime = time;
             this.method = method;
@@ -26,7 +36,7 @@ namespace KPv6
         }
         public override string ToString()
         {
-            return $"\"{name}\"";
+            return $"{id}.\"{name}\"";
         }
     }
 }

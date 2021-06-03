@@ -82,9 +82,10 @@ namespace KPv6
         {
             listBoxLog.Items.Clear();
             allProcesses = new List<Process>();
+            Process.lastId = 0;
             foreach (Process process in processesForStart)
             {
-                allProcesses.Add(new Process(process.name, process.nameMethod, process.workingTime, process.method, process.description));
+                allProcesses.Add(new Process(process.name, process.nameMethod, process.workingTime, process.method, process.description, process.id));
             }
             processPlan = new ProcessPlan(listBoxLog, listBoxProcesses, listBoxState, listBoxTime, 
                 int.Parse(textBox1.Text), allProcesses, labelQuantum);

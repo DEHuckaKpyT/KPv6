@@ -39,7 +39,6 @@ namespace KPv6
             }
             listBox.Invoke(new Action(() => listBox.Items.Add("Результат выполнения \"" + forPrint + "\"")));
         }
-
         public void PrintDate()//выводит дату
         {
             listBox.Invoke(new Action(() => listBox.Items.Add("Результат выполнения \"" + DateTime.Now.ToString() + "\"")));

@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="KPv6.FormChangeProcess">
+    <Position X="8.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAgCAAAqAAABEAgAiQBAICEAEAAAEAQBAAQAAAAAA=</HashCode>
+      <FileName>FormChangeProcess.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="processes" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="KPv6.FormManageProcesses">
+    <Position X="6.5" Y="1.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAEgAAAAAKADgdMAgACAEABCBCgAAAAAARAAAAACAAA=</HashCode>
+      <FileName>FormManageProcesses.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="allProcesses" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="KPv6.FormViewProcessing">
+    <Position X="10.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gABkKAAAACAAhNMAAACBEAACAAAAACgEERAADgAggAA=</HashCode>
+      <FileName>FormViewProcessing.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="allProcesses" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="KPv6.Methods">
+    <Position X="0.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAACAAAAAAAAAAAAAgAAAAAACAEAhAAAAAAAA=</HashCode>
+      <FileName>Methods.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KPv6.Process">
+    <Position X="3.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAEICAAAAgAAAAEAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>Process.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KPv6.ProcessComparer">
+    <Position X="3.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>ProcessComparer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KPv6.Processor">
+    <Position X="3.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAQAgAAAAAAAA=</HashCode>
+      <FileName>Processor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KPv6.ProcessPlan">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gUQAIAAAAAAAAAMAAAAAAAAAAAEAAgAAAAAAAAAAAIA=</HashCode>
+      <FileName>ProcessPlan.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="processes" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="KPv6.Program" Collapsed="true">
+    <Position X="12" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KPv6.Properties.Resources" Collapsed="true">
+    <Position X="12" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KPv6.Properties.Settings" Collapsed="true">
+    <Position X="12" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="System.Windows.Forms.MyListBox">
+    <Position X="0.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>System\Windows\Forms\MyListBox.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="KPv6.ProcessState">
+    <Position X="3.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAAAAAAAAAEAAAAABAAAAAAEAAAAAA=</HashCode>
+      <FileName>ProcessState.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

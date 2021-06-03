@@ -100,6 +100,5 @@ namespace KPv6
             }
             listBoxProcesses.Invoke(new Action(() => listBoxProcesses.SelectedItem = selectedProcess));
         }
-
     }
 }

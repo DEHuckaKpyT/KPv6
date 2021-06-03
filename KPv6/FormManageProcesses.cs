@@ -54,7 +54,7 @@ namespace KPv6
             {
                 listBoxProcesses.Items.Add(process);
                 if (process.nameMethod == "Значения последовательности")
-                    listBoxProcessesExtented.Items.Add($"{process.workingTime + " мс",6} {process.nameMethod,-29} {$"n = {((Methods)process.method.Target).n}, x = {((Methods)process.method.Target).x}",-15:2} {process.description}");
+                    listBoxProcessesExtented.Items.Add($"{process.workingTime + " мс",6} {process.nameMethod,-29} {$"n = {((Methods)process.method.Target).n}, x = {((Methods)process.method.Target).x:N2}",-15} {process.description}");
                 if (process.nameMethod == "Указанный символ")
                     listBoxProcessesExtented.Items.Add($"{process.workingTime + " мс",6} {process.nameMethod,-29} {$"Символ = {((Methods)process.method.Target).c}",-15} {process.description}");
                 if (process.nameMethod == "Текущая дата")
